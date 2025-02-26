@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Teaching Academy</title>
+    <script>
+        function selectSubject(subject) {
+            if (subject === 'Maths') {
+                window.location.href = "Maths/maths.html";
+            } else if (subject === 'Chemistry') {
+                window.location.href = "Chemstry/chemistry.html";
+            } else if (subject === 'Physics') {
+                window.location.href = "Physics/physics.html";
+            }
+        }
+    </script>
+
+<script>
+    function selectSubject(subject) {
+        let confirmSelection = confirm("Do you want to proceed with " + subject + "?");
+        if (confirmSelection) {
+            window.location.href = subject + "/" + subject.toLowerCase() + ".html";
+        }
+    }
+</script>
+
+
+</head>
+<body>
+
+<center>
+    <h2> My Teaching Academy </h2>
+    <img src="mta.jpg" alt="MTA Image" width="190" height="190" border="3">
+</center>
+
+<br><br>
+
+<h2> Register Here! </h2>
+<br>
+<p> Which subject do you want to study? </p>
+
+<!-- Adjusted buttons with onclick event -->
+<input type="button" value="Maths" onclick="selectSubject('Maths')" />
+<input type="button" value="Chemistry" onclick="selectSubject('Chemistry')" />
+<input type="button" value="Physics" onclick="selectSubject('Physics')" />
+
+</body>
+</html>
